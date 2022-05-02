@@ -7,6 +7,7 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
+import ListView from './views/ListView';
 
 export default function App() {
   return (
