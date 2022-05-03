@@ -26,7 +26,7 @@ export default function ListView() {
           console.log(character);
           return (
             <article key={character.id + character.name}>
-              <Link to={`/characters/:id`}>{character.name}</Link>
+              <Link to={`/characters/${character.id}`}>{character.name}</Link>
               <p>Species: {character.species}</p>
             </article>
           );

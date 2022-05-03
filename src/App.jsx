@@ -8,6 +8,7 @@ import {
   Route,
 } from 'react-router-dom';
 import ListView from './views/ListView';
+import DetailView from './views/DetailView';
 
 export default function App() {
   return (
