@@ -13,6 +13,9 @@ describe('App should fetch character data from Rick and Morty API', () => {
 
     screen.getByText(/loading.../i);
 
-    await screen.findByText(/rick sanchez/i);
+    const link = await screen.findByText(/rick sanchez/i);
+    userEvent.click(link);
+
+    await screen.findByAltText(/image of rick sanchez/i);
   });
 });
