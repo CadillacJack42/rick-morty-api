@@ -18,4 +18,18 @@ describe('App should fetch character data from Rick and Morty API', () => {
 
     await screen.findByAltText(/image of rick sanchez/i);
   });
+
+  it('Should page with Charcter Detail', async () => {
+    render(
+      <MemoryRouter initialEntries={['/characters/2']}>
+        <App />
+      </MemoryRouter>
+    );
+
+    screen.getByText(/loading.../i);
+
+    const head = await screen.findByRole('heading');
+
+    await screen.findByAltText(/image of morty smith/i);
+  });
 });

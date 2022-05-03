@@ -23,7 +23,6 @@ export default function ListView() {
         <h3>Loading...</h3>
       ) : (
         list.map((character) => {
-          console.log(character);
           return (
             <article key={character.id + character.name}>
               <Link to={`/characters/${character.id}`}>{character.name}</Link>
