@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function ListView() {
   const [list, setList] = useState([]);
@@ -25,7 +26,7 @@ export default function ListView() {
           console.log(character);
           return (
             <article key={character.id + character.name}>
-              <h3>{character.name}</h3>
+              <Link to={`/characters/:id`}>{character.name}</Link>
               <p>Species: {character.species}</p>
             </article>
           );

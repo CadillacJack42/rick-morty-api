@@ -13,6 +13,9 @@ export default function App() {
   return (
     <Router>
       <Switch>
+        <Route path="/characters/:id">
+          <DetailView />
+        </Route>
         <Route path="/">
           <ListView />
         </Route>
